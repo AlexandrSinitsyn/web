@@ -1,0 +1,31 @@
+<template>
+    <div class="users datatable">
+        <div class="caption">User</div>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Login</th>
+                <th>Admin</th>
+            </tr>
+            </thead>
+            <tbody>
+                <User v-for="user in users" :user="user" :key="user.id"/>
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<script>
+import User from "@/components/page/User";
+export default {
+    name: "Users",
+    props: ["users"],
+    components: {User}
+}
+</script>
+
+<style scoped>
+
+</style>

@@ -1,0 +1,269 @@
+:root {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    color: rgb(34, 34, 34);
+
+    --border-color: rgb(185, 185, 185);
+    --table-border-color: rgb(210, 210, 210);
+    --boder: 1px solid var(--border-color);
+    --border-radius: 6px;
+    --caption-color: #3B5998;
+}
+
+html {
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    position: relative;
+}
+
+header .languages {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .enter-or-register-box {
+    position: absolute;
+    top: calc(24px + 0.5rem);
+    right: 0;
+}
+
+header nav {
+    border: var(--boder);
+    border-radius: var(--border-radius);
+    margin: 0.5rem 0 2rem 0;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 1rem;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin-right: 1rem;
+}
+
+.middle {
+    display: flow-root;
+}
+
+aside {
+    float: right;
+    width: 20rem;
+}
+
+section {
+    border: var(--boder);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+section .header {
+    border-bottom: var(--boder);
+    padding: 0.25rem;
+    font-weight: bold;
+    color: var(--caption-color);
+}
+
+section .header:before {
+    content: "→ ";
+    font-size: 1.1rem;
+}
+
+section .body {
+    padding: 0.25rem;
+}
+
+section .footer {
+    border-top: var(--boder);
+    padding: 0.25rem;
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+section .footer a:after {
+    content: " →";
+}
+
+main {
+    margin-right: 21rem;
+}
+
+main .user-box {
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+main .user-box .user-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+main .user-box .user-description .info {
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    margin: 0.2rem;
+}
+
+main .user-link {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+main .user-link-name-only {
+    margin-left: 0.5rem;
+    /*font-size: 1.4rem;*/
+    font-weight: bolder;
+}
+
+main .user-box .user-posts {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+main .user-pointer {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-left: -0.5rem;
+
+    width: 6rem;
+}
+
+main .user-pointer a {
+    text-decoration: none;
+}
+
+main .user-pointer .previous,
+main .user-pointer .next {
+    color: var(--border-color);
+}
+
+
+header nav ul li .current-page-name {
+    display: inline;
+}
+
+header nav ul li .current-page-name .ref {
+    border-bottom: 0.3rem solid #3B5998;
+}
+
+
+main .datatable {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: available;
+}
+
+main .datatable .caption {
+    border-bottom: 1px solid var(--table-border-color);
+    background-color: var(--table-border-color);
+    padding: 5px;
+}
+
+main .datatable table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+main .datatable table thead tr th {
+    border-right: 1px solid var(--table-border-color);
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+main .datatable table tbody tr {
+    border-top: 1px solid var(--table-border-color);
+    text-align: center;
+}
+
+main .datatable table tbody tr td {
+    border-right: 1px solid var(--table-border-color);
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+main .datatable table tbody tr td:nth-child(3) {
+    padding: 0.3rem;
+    text-align: left;
+}
+
+main .datatable table tbody tr:nth-child(2n - 1) {
+    background-color: rgb(240, 240, 240);
+}
+
+
+
+main article {
+    padding-top: 1rem;
+}
+
+main article .title {
+    color: var(--caption-color);
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+main article .information {
+    color: var(--border-color);
+}
+
+main article .body {
+    border-left: 0.4rem solid var(--border-color);
+    padding-left: 1rem;
+}
+
+main .error-page {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: var(--boder);
+    text-align: center;
+}
+
+
+.user-color-red {
+    color: red;
+}
+
+.user-color-green {
+    color: green;
+}
+
+.user-color-blue {
+    color: blue;
+}
